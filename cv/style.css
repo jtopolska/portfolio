@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --f-family: 'Fredoka One', cursive;
+    --f2-family: 'Varela Round', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--f-family);
+    background-color: #fff;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10%;
+    height: 1100px;
+}
+
+#particles-js-one {
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+}
+
+h1 {
+    margin: 30px 0;
+    font-size: 37px;
+    color:black;
+}
+
+h1 span {
+    color: #2F8F9D;
+}
+
+button {
+    width: 300px;
+    background-color: #2F8F9D;
+    color: #fff;
+    margin: 50px 10px;
+    padding: 13px 10px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--f2-family);
+    font-size: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 500px;
+    margin: 10px;
+}

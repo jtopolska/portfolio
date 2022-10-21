@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --f-family: 'Fredoka One', cursive;
+    --f2-family: 'Varela Round', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--f-family);
+    background-color: #fff;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--f2-family);
+    margin: 0 10%;
+    padding-bottom: 5%;
+}
+
+.personal-container {
+    display: flex;
+    align-items: center;
+    box-shadow: 20px -20px 0 -17px #fff,
+    -20px 20px 0 -17px #fff,
+    20px -20px 0 -20px dimgray,
+    0 0 5px 2px dimgray;
+}
+
+.personal-container p {
+    width: 85%;
+    padding: 5px;
+}
+
+.personal-container img {
+    width: 15%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+a {
+    color: black;
+    text-decoration: underline dotted #2F8F9D;
+}
+
+#particles-js-one {
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+}
+
+h1 {
+    margin: 30px 0;
+    font-size: 37px;
+    color:black;
+}
+
+h1 span {
+    color: #2F8F9D;
+}
+
+.personal {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.personal span {
+    color: rgb(47, 143, 157);
+    font-weight: bolder;
+}
+
+h2 {
+    color: #2F8F9D;
+    margin: 20px 0 10px 0;
+}
+
+strong p {
+    background-color: rgba(47, 143, 157, .1);
+    border-radius: 5px;
+    padding: 7px;
+}
