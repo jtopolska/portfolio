@@ -7,6 +7,11 @@
     --f2-family: 'Varela Round', sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+    
+
 body {
     margin: 0;
     font-family: var(--f-family);
