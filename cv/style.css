@@ -12,12 +12,13 @@ body {
     font-family: var(--f-family);
     background-color: #fff;
 }
+
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10%;
-    height: 1100px;
+    margin: 0 2%;
+    height: 1500px;
 }
 
 #particles-js-one {
@@ -30,6 +31,7 @@ h1 {
     margin: 30px 0;
     font-size: 37px;
     color:black;
+    text-align: center;
 }
 
 h1 span {
@@ -37,15 +39,15 @@ h1 span {
 }
 
 button {
-    width: 300px;
+    width: 400px;
     background-color: #2F8F9D;
     color: #fff;
     margin: 50px 10px;
-    padding: 13px 10px 10px 10px;
+    padding: 18px 15px 15px 15px;
     border: none;
     border-radius: 5px;
     font-family: var(--f2-family);
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .images {
@@ -55,6 +57,99 @@ button {
 }
 
 img {
-    width: 500px;
-    margin: 10px;
+    width: 700px;
+    margin: 15px;
+}
+
+@media all and (max-width: 1530px) {
+    img {
+        width: 600px;
+    }
+
+    section {
+        height: 1350px;
+    }
+}
+
+@media all and (max-width: 1330px) {
+    img {
+        width: 500px;
+    }
+
+    section {
+        height: 1170px;
+    }
+}
+
+@media all and (max-width: 1110px) {
+    img {
+        width: 600px;
+    }
+
+    section {
+        height: 1800px;
+    }
+}
+
+@media all and (max-width: 660px) {
+    img {
+        width: 500px;
+    }
+
+    section {
+        height: 1600px;
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 540px) {
+    img {
+        width: 400px;
+        margin: 10px;
+    }
+
+    section {
+        height: 1300px;
+    }
+}
+
+@media all and (max-width: 422px) {
+    img {
+        width: 300px;
+        margin: 5px;
+    }
+
+    section {
+        height: 1100px;
+    }
+
+    button {
+        width: 300px;
+        padding: 13px 10px 10px 10px;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 33px;
+    }
+}
+
+@media all and (max-width: 322px) {
+    img {
+        width: 240px;
+    }
+
+    section {
+        height: 900px;
+    }
+
+    button {
+        width: 240px;
+        padding: 10px 7px 7px 7px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
 }
