@@ -7,7 +7,7 @@ function setHeight() {
 }
 setHeight();
 
-let tl = gsap.timeline({defaults: {duration: 1, opacity: 0}});
+let tl = gsap.timeline({defaults: {duration: .8, opacity: 0}});
 
 tl.from('.introduction', {y: 200, x: 200})
 tl.from('.bootstrap', {y: 200, x: -200})
