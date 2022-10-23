@@ -1,8 +1,3 @@
-// window.onresize = function () {
-//     location.reload();
-// };
-
-
 const textArray = [
     "I am a Front End Developer",
     "I am an Avid Learner",
