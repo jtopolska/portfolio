@@ -343,6 +343,7 @@ h4 {
 .description {
     font-size: 16px;
     cursor: pointer;
+    height: 100%;
 }
 
 .fourth-section {
