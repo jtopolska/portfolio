@@ -872,6 +872,16 @@ h2::after {
 
 @media all and (max-width: 900px) {
     .nav-menu {
+        font-family: var(--f2-family);
+    }
+
+    .link {
+        padding-right: 20px;
+    }
+}
+
+@media all and (max-width: 770px) {
+    .nav-menu {
         display: none;
     }
 
@@ -886,9 +896,7 @@ h2::after {
     .description-text {
         padding: 15% 10px 20px 10px;
     }
-}
-
-@media all and (max-width: 770px) {
+    
     .social img {
         margin: 0 10px;
     }
