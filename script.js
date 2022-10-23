@@ -1,6 +1,6 @@
-// window.onresize = function () {
-//     location.reload();
-// };
+window.onresize = function () {
+    location.reload();
+};
 
 
 const textArray = [
@@ -103,9 +103,9 @@ AOS.init({
     debounceDelay: 50,
     throttleDelay: 99,
 
-    offset: 100,
-    delay: 0.5,
-    duration: 1000,
+    offset: 0,
+    delay: 0.3,
+    duration: 800,
     easing: 'ease',
     once: false,
     mirror: false,
@@ -134,8 +134,8 @@ function toggleSidebar() {
     sidebarList.classList.toggle('move-to-left');
 
     // на всі посилання присвоюємо клас Active
-    for (let x of sideItem) {
-        x.classList.toggle('active');
+    for (let item of sideItem) {
+        item.classList.toggle('active');
     }
     sideAnchor.forEach(anchor => {
         anchor.addEventListener('click', () => {
@@ -152,7 +152,6 @@ sideBG.addEventListener('click', (e) => {
 // натискаємо ESC - закриваємо/відкриваємо меню
 document.addEventListener('keyup', (e) => {
     if (e.keyCode === 27) {
-        console.log(e)
         toggleSidebar();
     }
 })
@@ -186,69 +185,47 @@ descriptionBtn.forEach((btn, index) => {
 
 
 
-const projectDisplay = document.querySelectorAll('.project-display');
-const linkProject = document.querySelector('.link-projects');
-const linkContact = document.querySelector('.link-contacts');
+// const projectDisplay = document.querySelectorAll('.project-display');
+// const linkProject = document.querySelector('.link-projects');
+// const linkContact = document.querySelector('.link-contacts');
 
-linkProject.addEventListener('click', () => {
-    setDelay();    
+// linkProject.addEventListener('click', () => {
+//     setDelay();    
+// })
+// linkContact.addEventListener('click', () => {
+//     setDelay();
+// });
+
+// function setDelay() {
+//     // відложуємо появлення анімації, щоб не було перекриття(анімація перекриває меню)
+//     AOS.init({
+//         delay: 1300        
+//     });
+//     // робимо перезагрузку, щоб повернути попередні значення
+//     setTimeout(function () {
+//         history.go();
+//     }, 800);
+// }
+
+
+
+const sideLink = document.querySelectorAll('.side-link img');
+const sideLi = document.querySelectorAll('.side-link li');
+
+sideLink.forEach((link, index) => {
+    link.addEventListener('mouseover', () => {
+        sideLi[index].style.display = 'block';
+        gsap.to(sideLi[index], {x: 5, opacity: 1})
+    })
+});
+
+sideLink.forEach((link, index) => {
+    link.addEventListener('mouseleave', () => {
+        gsap.to(sideLi[index], {x: -5, opacity: 0})
+        sideLi[index].style.display = 'none';
+    })
 })
-linkContact.addEventListener('click', () => {
-    setDelay();
-});
 
-function setDelay() {
-    // відложуємо появлення анімації, щоб не було перекриття(анімація перекриває меню)
-    AOS.init({
-        delay: 1300        
-    });
-    // робимо перезагрузку, щоб повернути попередні значення
-    setTimeout(function () {
-        history.go();
-    }, 800);
-}
-
-
-const showMenuHome = document.querySelector('.home img');
-const showMenuAbout = document.querySelector('.about img');
-const showMenuProject = document.querySelector('.project img');
-const showMenuContact = document.querySelector('.contacts img');
-const showMenuCV = document.querySelector('.cv img');
-
-showMenuHome.addEventListener('mouseover', () => {
-    gsap.to(".home li", {x: 5, opacity: 1})
-});
-showMenuHome.addEventListener('mouseleave', () => {
-    gsap.to(".home li", {x: -5, opacity: 0})
-});
-
-showMenuAbout.addEventListener('mouseover', () => {
-        gsap.to(".about li", {x: 5, opacity: 1})
-    });
-showMenuAbout.addEventListener('mouseleave', () => {
-        gsap.to(".about li", {x: -5, opacity: 0})
-    });
-
-showMenuProject.addEventListener('mouseover', () => {
-        gsap.to(".project li", {x: 5, opacity: 1})
-    });
-showMenuProject.addEventListener('mouseleave', () => {
-        gsap.to(".project li", {x: -5, opacity: 0})
-    });
-
-showMenuContact.addEventListener('mouseover', () => {
-        gsap.to(".contacts li", {x: 5, opacity: 1})
-    });
-showMenuContact.addEventListener('mouseleave', () => {
-        gsap.to(".contacts li", {x: -5, opacity: 0})
-    });
-
-showMenuCV.addEventListener('mouseover', () => {
-        gsap.to(".cv li", {x: 5, opacity: 1})
-    });
-showMenuCV.addEventListener('mouseleave', () => {
-        gsap.to(".cv li", {x: -5, opacity: 0})
-    });
 
 
 particlesJS("particles-js-one", {
@@ -1141,15 +1118,22 @@ particlesJS("particles-js-eight", {
     "retina_detect": true
 });
 
-let menu = document.querySelector(".side-menu");
+const menu = document.querySelector(".side-menu");
+const burgerMenu = document.querySelector('.side-nav-bar');
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
     menu.style.display = "block";
+    if (document.documentElement.clientWidth <= 900) {
+        burgerMenu.style.display = 'none';
+    }
     }
     else {
     menu.style.display = "none";
+    if (document.documentElement.clientWidth <= 900) {
+    burgerMenu.style.display = 'block';
     }
+}
 }
