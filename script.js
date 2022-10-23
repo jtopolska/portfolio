@@ -104,7 +104,7 @@ AOS.init({
     delay: 0.3,
     duration: 800,
     easing: 'ease',
-    once: false,
+    once: true,
     mirror: false,
     anchorPlacement: 'top-bottom',
 });
