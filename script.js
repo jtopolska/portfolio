@@ -16,7 +16,6 @@ const getAnimFromIndex = (index) => (
     repeatDelay: 2,
     yoyo: true,
     text: {
-    //this is the code that replaces the text
     value: textArray[index],
     delimiter: ""
     },
@@ -38,8 +37,6 @@ tl1.to(".span", {
     repeat: -1,
 })
 
-//cursor logic
-//blink only when not typing or deleting
 const tl2 = gsap.timeline()
 
 tl2.to("h2", {
@@ -133,7 +130,6 @@ function toggleSidebar() {
     mainText.classList.toggle('active');
     sidebarList.classList.toggle('move-to-left');
 
-    // на всі посилання присвоюємо клас Active
     for (let item of sideItem) {
         item.classList.toggle('active');
     }
@@ -149,7 +145,6 @@ sideBG.addEventListener('click', (e) => {
     }
 })
 
-// натискаємо ESC - закриваємо/відкриваємо меню
 document.addEventListener('keyup', (e) => {
     if (e.keyCode === 27) {
         toggleSidebar();
@@ -157,14 +152,12 @@ document.addEventListener('keyup', (e) => {
 })
 
 
-// виводимо опис сайтів
 const descriptionBtn = document.querySelectorAll('.description');
 const descriptionText = document.querySelectorAll('.description-text');
 let count = 0;
 
 descriptionBtn.forEach((btn, index) => {
     btn.addEventListener('click', showDescription)
-    // при втраті фокусу - ховаємо сам опис та змінюємо значення змінної, бо треба буде натискати двічі, щоб з'явився новий опис
     btn.addEventListener('blur', hideDescription)
 
     function showDescription() {
@@ -182,31 +175,6 @@ descriptionBtn.forEach((btn, index) => {
         count = 0;
     }
 })
-
-
-
-// const projectDisplay = document.querySelectorAll('.project-display');
-// const linkProject = document.querySelector('.link-projects');
-// const linkContact = document.querySelector('.link-contacts');
-
-// linkProject.addEventListener('click', () => {
-//     setDelay();    
-// })
-// linkContact.addEventListener('click', () => {
-//     setDelay();
-// });
-
-// function setDelay() {
-//     // відложуємо появлення анімації, щоб не було перекриття(анімація перекриває меню)
-//     AOS.init({
-//         delay: 1300        
-//     });
-//     // робимо перезагрузку, щоб повернути попередні значення
-//     setTimeout(function () {
-//         history.go();
-//     }, 800);
-// }
-
 
 
 const sideLink = document.querySelectorAll('.side-link img');
