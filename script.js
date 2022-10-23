@@ -1094,13 +1094,13 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
     menu.style.display = "block";
-    if (document.documentElement.clientWidth <= 900) {
+    if (document.documentElement.clientWidth <= 770) {
         burgerMenu.style.display = 'none';
     }
     }
     else {
     menu.style.display = "none";
-    if (document.documentElement.clientWidth <= 900) {
+    if (document.documentElement.clientWidth <= 770) {
     burgerMenu.style.display = 'block';
     }
 }
