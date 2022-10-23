@@ -1,6 +1,6 @@
-window.onresize = function () {
-    location.reload();
-};
+// window.onresize = function () {
+//     location.reload();
+// };
 
 
 const textArray = [
