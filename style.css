@@ -340,6 +340,11 @@ h4 {
     font-family: var(--f2-family);
 }
 
+.button-align {
+    display: flex;
+    justify-content: center;
+}
+
 .description {
     font-size: 16px;
     cursor: pointer;
