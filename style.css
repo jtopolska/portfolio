@@ -324,7 +324,6 @@ h4 {
 }
 
 .web-link img, .description img {
-    text-align: center;
     width: 20px;
     height: 20px;
 }
@@ -1140,6 +1139,10 @@ h2::after {
 
     .web-link, .web-code, .description {
         padding: 5px;
+    }
+    
+    .description img {
+        text-align: center;
     }
 }
 
