@@ -7,11 +7,12 @@ function setHeight() {
 }
 setHeight();
 
-let tl = gsap.timeline({defaults: {duration: .8, opacity: 0}});
+let tl = gsap.timeline({defaults: {duration: .7, opacity: 0}});
 
-tl.from('.introduction', {y: 200, x: 200})
-tl.from('.bootstrap', {y: 200, x: -200})
-tl.from('.gsap', {y: -100})
+tl.from('.js', {y: 200, x: 200})
+tl.from('.gsap', {y: 200, x: -200})
+tl.from('.introduction', {y: -200, x: 200})
+tl.from('.bootstrap', {y: -200, x: -200})
 tl.from('button', {y: 80})
 
 
