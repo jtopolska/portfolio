@@ -882,6 +882,10 @@ h2::after {
     .link {
         padding-right: 20px;
     }
+    
+    .social img {
+        margin: 0 10px;
+    }
 }
 
 @media all and (max-width: 770px) {
@@ -901,24 +905,10 @@ h2::after {
         padding: 15% 10px 20px 10px;
     }
     
-    .social img {
-        margin: 0 10px;
-    }
-
-    .author {
-        width: 65%;
-    }
-    
-    .social {
-        width: 35%;
-    }
-}
-
-@media all and (max-width: 670px) {
     .fifth-section {
         height: 160px;
     }
-    
+
     .footer-container {
         flex-direction: column;
     }
@@ -1165,6 +1155,10 @@ h2::after {
 
     .fourth-section {
         height: 650px;
+    }
+    
+    .social img {
+        margin: 0 8px;
     }
 }
 
